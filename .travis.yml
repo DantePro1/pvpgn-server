@@ -34,8 +34,7 @@ addons:
       version: 1.99.7.2.0
       description: Player vs Player Gaming Network (PvPGN)
 
-    # The command that will be added as an argument to "cov-build" to compile your project for analysis,
-    # ** likely specific to your build **
+    build_command_prepend: mkdir build && cd build && cmake -D WITH_MYSQL=true -D WITH_LUA=true ../
     build_command: make
     branch_pattern: coverity_scan
 
