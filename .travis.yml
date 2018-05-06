@@ -4,12 +4,12 @@ dist: trusty
 language: cpp
 os: linux
 compiler: gcc
-  
+
 branches:
   only:
     - master
     - coverity_scan
-    
+
 env:
   global:
     # COVERITY_SCAN_TOKEN
@@ -28,13 +28,11 @@ addons:
       - libmysqlclient-dev
       - liblua5.1-0-dev
       - cmake
-
   coverity_scan:
     project:
       name: pvpgn/pvpgn-server
       version: 1.99.7.2.0
       description: Player vs Player Gaming Network (PvPGN)
-
     build_command_prepend: mkdir build && cd build && cmake -D WITH_MYSQL=true -D WITH_LUA=true ../
     build_command: make
     branch_pattern: coverity_scan
