@@ -50,6 +50,7 @@ script:
   - if [ "${COVERITY_SCAN_BRANCH}" != 1 ]; then
       make;
     fi
+
 after_script:
   - sudo make install
   - sudo make uninstall
