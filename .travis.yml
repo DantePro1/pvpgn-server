@@ -46,9 +46,7 @@ before_script:
   - cmake -D WITH_MYSQL=true -D WITH_LUA=true ../
 
 script:
-  - if [ "${COVERITY_SCAN_BRANCH}" != 1 ]; then
-      make;
-    fi
+  - make
 
 after_script:
   - sudo make install
