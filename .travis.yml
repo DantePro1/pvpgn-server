@@ -7,7 +7,6 @@ compiler: gcc
 
 branches:
   only:
-    - master
     - coverity_scan
 
 env:
